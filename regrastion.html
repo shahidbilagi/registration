@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        .gender, .qualification {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        button {
+            margin-top: 15px;
+            padding: 8px 15px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Registration Form</h2>
+        <form onsubmit="return register()">
+            <label>Student Name: <input type="text" required></label>
+            <label>Father Name: <input type="text" required></label>
+            <label>Mother Name: <input type="text" required></label>
+            
+            <label>Gender:</label>
+            <div class="gender">
+                <input type="radio" name="gender" value="Male" required> Male
+                <input type="radio" name="gender" value="Female"> Female
+            </div>
+            
+            <label>Qualification:</label>
+            <div class="qualification">
+                <input type="checkbox" name="qualification" value="High School"> High School
+                <input type="checkbox" name="qualification" value="Bachelor"> Bachelor
+                <input type="checkbox" name="qualification" value="Master"> Master
+            </div>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <script>
+        function register() {
+            alert("Registration Successful");
+            return false; // Prevent actual form submission
+        }
+    </script>
+</body>
+</html>
